@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="#" th:action="newrecord" th:object=${product} method="post">
+  <fieldset>
+    <legend>Create New Product</legend>
+    Name<br>
+    <input type="text" name="name"><br>
+    brand<br>
+    <input type="text" name="brand" ><br>
+    MadeIn<br>
+     <input type="text" name="madein"><br>
+     Price <br>
+      <input type="text" name="price"><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+
+
+</body>
+</html>

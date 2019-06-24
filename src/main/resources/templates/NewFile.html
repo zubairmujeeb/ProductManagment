@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div align="center">
+		<h1>Product Manager</h1>
+
+		<a href="save"> Create New product </a>
+
+
+		<table border="1" cellpadding="10">
+
+			<thead>
+				<tr>
+					<th>Product ID</th>
+					<th>Product Name</th>
+					<th>Product Brand</th>
+					<th>Product MadeIn</th>
+					<th>Product Price</th>
+
+					<th>Actions</th>
+
+				</tr>
+
+			</thead>
+
+			<tbody>
+
+				<tr th:each="product: ${Products}">
+					<td th:text="${product.id}">Product Name</td>
+					<td th:text="${product.name}">Product Brand</td>
+
+					<td th:text="${product.brand}">Product Brand</td>
+					<td th:text="${product.madein}">Product Madein</td>
+
+
+					<td th:text="${product.price}">Product Price</td>
+
+					<td><a th:href="@{'/editform/'+${product.id}}">Edit</a></td>
+					<td><a th:href="@{'/deleterecord/'+${product.id}}">Delete</a></td>
+
+				</tr>
+
+			</tbody>
+
+		</table>
+	</div>
+</body>
+</html>
